@@ -1,8 +1,0 @@
-{
-    "files.associations": {
-        "iostream": "cpp",
-        "hash_map": "cpp",
-        "chrono": "cpp",
-        "algorithm": "cpp"
-    }
-}
