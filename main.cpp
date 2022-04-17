@@ -1,8 +1,54 @@
-#include"main.h"
+#include"based_class.h"
+
+// функция взаимодействия пользователя для базового класса
+void Foo_first();
+
+void Foo_second();
+
+void Foo_third();
+
+void Foo_fourth();
+
 
 int main()
 {
-    string str; //строка для ввода действия
+    int fl;
+    cout << "1 -- многочлен\n2 -- двухчлен\n3 -- трехчлен\n4 -- четырехчлен\n";
+    cin >> fl;
+    switch (fl)
+    {
+    case 1:
+        Foo_first();
+        break;
+    
+    case 2:
+        Foo_second();
+        break;
+    
+    case 3:
+        Foo_third();
+        break;
+    
+    case 4:
+        Foo_fourth();
+        break;
+    
+    default:
+        cout << "Error\n";
+        break;
+    }
+    
+    
+
+    Foo_first();
+    
+    
+}
+
+
+void Foo_first()
+{
+string str; //строка для ввода действия
     int n; //степень многочлена
     
 
@@ -80,7 +126,21 @@ int main()
 
     //удаление массива
     delete [] arr_n;
-
-    
-    
 }
+
+
+
+void Foo_second()
+{
+    
+};
+
+void Foo_third()
+{
+    
+};
+
+void Foo_fourth()
+{
+    
+};

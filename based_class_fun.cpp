@@ -1,4 +1,4 @@
-#include"main.h"
+#include"based_class.h"
 
 // number_x - номер коэффициента, который нужно изменить x - само число 
 void Main::Set(int number_x, double x)
