@@ -43,9 +43,12 @@ public:
     {
         int tmp = degree_n;
         cout << "\nмногочлен: ";
+
+        //печататет многочлен
         for (int i = 0; i <= degree_n; i++)
         {
-            if(!i)
+            //если i равен 0 то вывод в if-е
+            if((!i) && (arr_degree_n[i] >= 0))
             {
                 cout << " " << arr_degree_n[i] << "*X" << tmp;
                 tmp--;
