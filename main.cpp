@@ -1,19 +1,19 @@
 #include"based_class.h"
 
 // функция взаимодействия пользователя для базового класса
-void Foo_first(Main *p);
+void Foo_first(Main<double> *p);
 
-void Foo_second(Main *p);
+void Foo_second(Main<double> *p);
 
-void Foo_third(Main *p);
+void Foo_third(Main<double> *p);
 
-void Foo_fourth(Main *p);
+void Foo_fourth(Main<double> *p);
 
 
 int main()
 {
     //создаем указатель основного класса его нужно интегрировать во все функции на 4 6 8 10 строчки
-    Main *p;
+    Main<double> *p;
     // работа с пользователем 
     int fl;
     
@@ -54,7 +54,7 @@ int main()
 };
 
 
-void Foo_first(Main *p)
+void Foo_first(Main<double> *p)
 {
     string str; //строка для ввода действия
     int n; //степень многочлена
@@ -77,7 +77,7 @@ void Foo_first(Main *p)
     for (int i = 0; i <= n; i++) cin >> arr_n[i]; // вводит коэффициентов с терминала
 
     //создание класса через указатель на основной класс, вызывать класс нужно через указатель p
-    Main mnogochlen(n, arr_n);
+    Main<double> mnogochlen(n, arr_n);
     p = &mnogochlen;
     cout << "Создание многочлена завершено\n"; 
 
@@ -146,17 +146,17 @@ void Foo_first(Main *p)
 
 
 
-void Foo_second(Main *p)
+void Foo_second(Main<double> *p)
 {
     
 };
 
-void Foo_third(Main *p)
+void Foo_third(Main<double> *p)
 {
     
 };
 
-void Foo_fourth(Main *p)
+void Foo_fourth(Main<double> *p)
 {
     
 };
