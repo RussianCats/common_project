@@ -3,6 +3,7 @@
 #include<cmath>
 using namespace std;
 
+
 class Main
 {
 protected:
@@ -26,19 +27,19 @@ public:
     };
     
     //задать значение
-    void Set(int number_x, double x);
+    virtual void Set(int number_x, double x);
     
     //получить значение
-    int Get(int number_x);
+    virtual int Get(int number_x);
 
     //функция покажет многочлен
-    void Show();
+    virtual void Show();
     
     //функция для изменения коэффициентов
-    void Change(double open_arr_degree_n[]);
+    virtual void Change(double arr_degree_n[]);
 
     //вычислениe значения многочлена для заданного числа
-    void Calculate_x(int number_x);
+    virtual void Calculate_x(int number_x);
 
     //деструктор
     ~Main()
