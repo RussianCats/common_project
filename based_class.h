@@ -10,8 +10,6 @@ protected:
     int degree_n; //степень многочлена n
     T *arr_degree_n = new T [degree_n + 1]; //все коэффициенты многочлена n-ой степени
     
-
-
 public:
     // конструктор по умолчанию
     Main()
@@ -54,7 +52,7 @@ public:
                 tmp--;
                 continue;
             } 
-            if(arr_degree_n[i] > 0) cout << " + " << arr_degree_n[i] << "*X" << tmp;
+            if(arr_degree_n[i] >= 0) cout << " + " << arr_degree_n[i] << "*X" << tmp;
             else cout << " - " << abs(arr_degree_n[i]) << "*X" << tmp;
             
             tmp--;
@@ -81,11 +79,22 @@ public:
         cout << "многочлен равен = " << end_x << "\n";
         
     }
+    
+    virtual void kub(){};
+    virtual void proizv(){};
+    virtual void summa(){};
+    virtual void raznost(){};
+    virtual void korni(){};
     //деструктор
     ~Main()
     {
         delete [] arr_degree_n;
     }
     
+    
 };
 
+
+
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------
