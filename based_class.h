@@ -94,6 +94,9 @@ public:
     virtual void summa(){};
     virtual void raznost(){};
     virtual void korni(){};
+    
+    //Функции класса Ромки
+    virtual void kva(){};
     //деструктор
     ~Main()
     {

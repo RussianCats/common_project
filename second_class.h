@@ -77,6 +77,31 @@ class Second: public Main<double> {
         if (arr_degree_n[0] < 0 && arr_degree_n[1] < 0 && vtdvu[0] < 0 && vtdvu[1] < 0){
             cout << abs(arr_degree_n[0]*vtdvu[0]) << "*X2 + " << abs(arr_degree_n[0]*vtdvu[1]+arr_degree_n[1]*vtdvu[0]) << "*X1*X0 + " << abs(arr_degree_n[1]*vtdvu[1]) << "*X0\n";
         }
+        if (arr_degree_n[0] >= 0 && arr_degree_n[1] >= 0 && vtdvu[0] < 0 && vtdvu[1] < 0){
+            cout << "-" << abs(arr_degree_n[0]*vtdvu[0]) << "*X2 - " << abs(arr_degree_n[0]*vtdvu[1]+arr_degree_n[1]*vtdvu[0]) << "*X1*X0 - " << abs(arr_degree_n[1]*vtdvu[1]) << "*X0\n";
+        }
+        if (arr_degree_n[0] < 0 && arr_degree_n[1] < 0 && vtdvu[0] >= 0 && vtdvu[1] < 0){
+            cout << "-" << abs(arr_degree_n[0]*vtdvu[0]) << "*X2 - " << abs(arr_degree_n[0]*vtdvu[1]+arr_degree_n[1]*vtdvu[0]) << "*X1*X0 + " << abs(arr_degree_n[1]*vtdvu[1]) << "*X0\n";
+        }
+        if (arr_degree_n[0] < 0 && arr_degree_n[1] < 0 && vtdvu[0] < 0 && vtdvu[1] >= 0){
+            cout << abs(arr_degree_n[0]*vtdvu[0]) << "*X2 + " << abs(arr_degree_n[0]*vtdvu[1]+arr_degree_n[1]*vtdvu[0]) << "*X1*X0 - " << abs(arr_degree_n[1]*vtdvu[1]) << "*X0\n";
+        }
+        if (arr_degree_n[0] < 0 && arr_degree_n[1] < 0 && vtdvu[0] >= 0 && vtdvu[1] >= 0){
+            cout << "-"<< abs(arr_degree_n[0]*vtdvu[0]) << "*X2 - " << abs(arr_degree_n[0]*vtdvu[1]+arr_degree_n[1]*vtdvu[0]) << "*X1*X0 - " << abs(arr_degree_n[1]*vtdvu[1]) << "*X0\n";
+        }
+        if (arr_degree_n[0] >= 0 && arr_degree_n[1] < 0 && vtdvu[0] < 0 && vtdvu[1] < 0){
+            cout << "-"<< abs(arr_degree_n[0]*vtdvu[0]) << "*X2 + " << abs(arr_degree_n[0]*vtdvu[1]+arr_degree_n[1]*vtdvu[0]) << "*X1*X0 + " << abs(arr_degree_n[1]*vtdvu[1]) << "*X0\n";
+        }
+        if (arr_degree_n[0] >= 0 && arr_degree_n[1] < 0 && vtdvu[0] < 0 && vtdvu[1] >= 0){
+            cout << "-"<< abs(arr_degree_n[0]*vtdvu[0]) << "*X2 + " << abs(arr_degree_n[0]*vtdvu[1]+arr_degree_n[1]*vtdvu[0]) << "*X1*X0 - " << abs(arr_degree_n[1]*vtdvu[1]) << "*X0\n";
+        }
+        if (arr_degree_n[0] < 0 && arr_degree_n[1] >= 0 && vtdvu[0] < 0 && vtdvu[1] < 0){
+            cout << abs(arr_degree_n[0]*vtdvu[0]) << "*X2 - " << abs(arr_degree_n[0]*vtdvu[1]+arr_degree_n[1]*vtdvu[0]) << "*X1*X0 - " << abs(arr_degree_n[1]*vtdvu[1]) << "*X0\n";
+        }
+        if (arr_degree_n[0] < 0 && arr_degree_n[1] >= 0 && vtdvu[0] >= 0 && vtdvu[1] < 0){
+            cout << "-"<< abs(arr_degree_n[0]*vtdvu[0]) << "*X2 + " << abs(arr_degree_n[0]*vtdvu[1]+arr_degree_n[1]*vtdvu[0]) << "*X1*X0 - " << abs(arr_degree_n[1]*vtdvu[1]) << "*X0\n";
+        }
+        
         delete [] vtdvu;
     };
     
