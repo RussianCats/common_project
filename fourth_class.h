@@ -40,7 +40,7 @@ class Fourth: public Main<double> {
     // Выводит произведение двух четырехчленов
     void proizv(){
         cout << "Введите коэффициенты второго четырехчлена:\n";
-        double *vtdvu4 = new double[4];
+        T *vtdvu4 = new T[4];
         for (int i=0; i<4;i++){
             cin >> vtdvu4[i];
         }
@@ -93,7 +93,7 @@ class Fourth: public Main<double> {
     
     // Выводит разность четырехчленов
     void raznost(){
-        double *vtdvu4 = new double[4];
+        T *vtdvu4 = new T[4];
         cout << "Введите коэффициенты второго четырехчлена:\n";
         for (int i=0; i<4;i++){
             cin >> vtdvu4[i];
@@ -114,9 +114,8 @@ class Fourth: public Main<double> {
     
     
     // Перегруженная функция для изменения коэффициентов
-    void Change(double open_arr_degree_n[])
+    void Change(T open_arr_degree_n[])
     {
         for (int i = 0; i <= degree_n; i++) arr_degree_n[i] = open_arr_degree_n[i];
     };
 };
-

@@ -46,7 +46,7 @@ class Second: public Main<double> {
     // Выводит произведение двух двучленов
     void proizv(){
         cout << "Введите коэффициенты второго двучлена:\n";
-        double *vtdvu = new double[2];
+        T *vtdvu = new T[2];
         for (int i=0; i<2;i++){
             cin >> vtdvu[i];
         }
@@ -108,7 +108,7 @@ class Second: public Main<double> {
     
     // Выводит сумму двучленов
     void summa(){                      
-        double *vtdvu = new double[2];
+        T *vtdvu = new T[2];
         cout << "Введите коэффициенты второго двучлена:\n";
         for (int i=0; i<2;i++){
             cin >> vtdvu[i];
@@ -132,7 +132,7 @@ class Second: public Main<double> {
     
     // Выводит разность двучленов
     void raznost(){
-        double *vtdvu = new double[2];
+        T *vtdvu = new T[2];
         cout << "Введите коэффициенты второго двучлена:\n";
         for (int i=0; i<2;i++){
             cin >> vtdvu[i];
@@ -162,9 +162,8 @@ class Second: public Main<double> {
     
     
     // Перегруженная функция для изменения коэффициентов
-    void Change(double open_arr_degree_n[])
+    void Change(T open_arr_degree_n[])
     {
         for (int i = 0; i <= degree_n; i++) arr_degree_n[i] = open_arr_degree_n[i];
     };
 };
-
