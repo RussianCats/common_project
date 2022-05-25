@@ -2,6 +2,7 @@
 #include"second_class.h"
 #include"third_class.h"
 #include"fourth_class.h"
+ 
 using namespace std;
 // функция взаимодействия пользователя для базового класса
 void Foo_first(Main<double> *p);
@@ -21,7 +22,7 @@ int main()
     int fl;
     
 
-    while (fl > 0)
+    do
     {
         cout << "0 -- выход\n1 -- многочлен\n2 -- двухчлен\n3 -- трехчлен\n4 -- четырехчлен\n";
         cin >> fl;
@@ -48,9 +49,9 @@ int main()
 
         default:
             cout << "Error\n";
-            
         }
-    }
+    }    
+    while (fl > 0);
     
     
     
@@ -109,7 +110,7 @@ void Foo_first(Main<double> *p)
             //проверка на правильный n
             do
             {
-                cout << "номер коэффициента и значение на которе хотите заменить(через пробел):";
+                cout << "номер коэффициента (старший начинается с 0)и значение на которе хотите заменить(через пробел):";
                 cin >> num >> x;
                 if (num > n) cout <<"Error\n";
             } while (num > n);
@@ -178,7 +179,7 @@ void Foo_second(Main<double> *p)
     cout << "Теперь вводим коэффициенты через пробел:\n";
     for (int i = 0; i < n; i++) cin >> arr_2[i]; // вводит коэффициенты с терминала
     
-    Second mnogochlen(n-1, arr_2);
+    Second<double> mnogochlen(n-1, arr_2);
     p = &mnogochlen;
     cout << "Создание многочлена завершено\n";
     cout << ":exit -- выход\n:show -- показать многочлен\n:change -- изменить все значения многочлена\n:kub -- вычислить куб двучлена\n:proizv -- найти произведение 2 двучленов\n:summa -- найти сумму двучленов\n:raznost -- найти разность двучленов\n:korni -- найти корень двучлена\n";
@@ -250,7 +251,7 @@ void Foo_third(Main<double> *p)
     cout << "Теперь вводим коэффициенты через пробел:\n";
     for (int i = 0; i < n; i++) cin >> arr_3[i]; // вводит коэффициенты с терминала
     
-    Third mnogochlen(n-1, arr_3);
+    Third<double> mnogochlen(n-1, arr_3);
     p = &mnogochlen;
     cout << "Создание многочлена завершено\n";
     cout << ":exit -- выход\n:show -- показать многочлен\n:change -- изменить все значения многочлена\n:kva -- вычислить квадрат трехчлена\n:proizv -- найти произведение 2 трехчленов\n:summa -- найти сумму трехчленов\n:raznost -- найти разность трехчленов\n";
@@ -315,7 +316,7 @@ void Foo_fourth(Main<double> *p)
     cout << "Теперь вводим коэффициенты через пробел:\n";
     for (int i = 0; i <= 3; i++) cin >> arr_4[i]; // вводит коэффициенты с терминала
     
-    Fourth mnogochlen(3, arr_4);
+    Fourth<double> mnogochlen(3, arr_4);
     p = &mnogochlen;
     cout << "Создание многочлена завершено\n";
     cout << ":exit -- выход\n:show -- показать многочлен\n:change -- изменить все значения многочлена\n:kva -- вычислить квадрат четырёхчлена\n:proizv -- найти произведение 2 четырёхчленов\n:summa -- найти сумму четырёхчленов\n:raznost -- найти разность четырёхчленов\n";

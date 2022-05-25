@@ -11,12 +11,12 @@ using namespace std;
 // функцию вычисления суммы двух четырехчленов,
 // функцию вычисления разности двух трехчленов.
 
-
+template<class T>
 class Fourth: public Main<double> {
     
     public:
     // конструктор с параметрами
-        Fourth(int open_degree_n, double open_arr_degree_n[])
+        Fourth(int open_degree_n, T open_arr_degree_n[])
         {
             degree_n = open_degree_n;
             for (int i = 0; i <= degree_n; i++) arr_degree_n[i] = open_arr_degree_n[i];
@@ -70,7 +70,7 @@ class Fourth: public Main<double> {
     // Выводит сумму четырехчленов
     
     void summa(){                      
-        double *vtdvu4 = new double[4];
+        T *vtdvu4 = new T[4];
         cout << "Введите коэффициенты второго четырехчлена:\n";
         for (int i=0; i<4;i++){
             cin >> vtdvu4[i];

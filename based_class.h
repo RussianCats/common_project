@@ -1,6 +1,8 @@
 #include<iostream>
 #include<string>
 #include<cmath>
+
+
 using namespace std;
 
 // 1. Создать базовый класс Многочлен степени n от одной переменной, заданный своими коэффициентами. Определить в базовом классе

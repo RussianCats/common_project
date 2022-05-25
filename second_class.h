@@ -12,11 +12,11 @@ using namespace std;
 // функцию вычисления разности двух двучленов
 // нахождение корней двучлена.
 
+template<class T>
 class Second: public Main<double> {
-    
     public:
     // конструктор с параметрами
-        Second(int open_degree_n, double open_arr_degree_n[])
+        Second(int open_degree_n, T open_arr_degree_n[])
         {
             degree_n = open_degree_n;
             for (int i = 0; i <= degree_n; i++) arr_degree_n[i] = open_arr_degree_n[i];

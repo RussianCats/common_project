@@ -11,11 +11,12 @@ using namespace std;
 //функцию вычисления суммы двух трехчленов,
 //функцию вычисления разности двух трехчленов.
 
+template<class T>
 class Third: public Main<double> {
     
     public:
     // конструктор с параметрами
-        Third(int open_degree_n, double open_arr_degree_n[])
+        Third(int open_degree_n, T open_arr_degree_n[])
         {
             degree_n = open_degree_n;
             for (int i = 0; i <= degree_n; i++) arr_degree_n[i] = open_arr_degree_n[i];
@@ -55,7 +56,7 @@ class Third: public Main<double> {
     // Выводит сумму двучленов
     void summa(){                      
         double *vtdvu = new double[3];
-        cout << "Введите коэффициенты второго двучлена:\n";
+        cout << "Введите коэффициенты второго трехчлена:\n";
         for (int i=0; i<3;i++)
         {
             cin >> vtdvu[i];
