@@ -15,8 +15,6 @@ template<class T>
 class Fourth: public Main<double> {
     
     public:
-    
-    
     // конструктор с параметрами
         Fourth(int open_degree_n, T open_arr_degree_n[])
         {
@@ -27,22 +25,25 @@ class Fourth: public Main<double> {
     
     // Раскрывает квадрат четырехчлена
     void kva(){
-        if (arr_degree_n[1] >= 0 && arr_degree_n[0] >= 0 && arr_degree_n[2] >= 0 && arr_degree_n[3] >= 0){
-            cout << pow(arr_degree_n[0], 2) <<"*X6 + " <<2*arr_degree_n[0]*arr_degree_n[1]<<"*X5 + "<< \
-            pow(arr_degree_n[1], 2)<<"*X4 + "<<pow(arr_degree_n[2], 2)<<"*X2 + "<<pow(arr_degree_n[3], 2)<<" + "<< 2*arr_degree_n[0]*arr_degree_n[2] << "*X4 + " << \
-            2*arr_degree_n[1]*arr_degree_n[2] << "*X3 + " << 2*arr_degree_n[0]*arr_degree_n[3] << "*X3 + " << 2*arr_degree_n[1]*arr_degree_n[3] << "*X2 + " << 2*arr_degree_n[2]*arr_degree_n[3] << "X" << endl;
-        }
-        else{
-            cout <<"какой-то коэффициент меньше 0 ERROR \n";
-        }
-        
+        cout << "Квадрат четырехчлена: ";
+            Foo_im_ILA(pow(arr_degree_n[0], 2), "X6"); 
+            Foo_im_ILA(2*arr_degree_n[0]*arr_degree_n[1], "X5");
+            Foo_im_ILA(pow(arr_degree_n[1], 2), "X4");
+            Foo_im_ILA(pow(arr_degree_n[2], 2),"X2");
+            Foo_im_ILA(pow(arr_degree_n[3], 2),"X0");
+            Foo_im_ILA(2*arr_degree_n[0]*arr_degree_n[2],"X4");
+            Foo_im_ILA(2*arr_degree_n[1]*arr_degree_n[2],"X3");
+            Foo_im_ILA(2*arr_degree_n[0]*arr_degree_n[3],"X3");
+            Foo_im_ILA(2*arr_degree_n[1]*arr_degree_n[3], "X2");
+            Foo_im_ILA(2*arr_degree_n[2]*arr_degree_n[3], "X1");
+            cout << "\n";
     };
     
     
     // Выводит произведение двух четырехчленов
     void proizv(){
         cout << "Введите коэффициенты второго четырехчлена:\n";
-        T *vtdvu4 = new T[4];
+        T vtdvu4[4];
         for (int i=0; i<4;i++){
             cin >> vtdvu4[i];
         }
@@ -50,67 +51,74 @@ class Fourth: public Main<double> {
         cout << "Произведение двух четырёхчленов: ";
         
         
-        if (arr_degree_n[0]>=0 && arr_degree_n[1]>=0 && vtdvu4[0] >= 0 && vtdvu4[1] >= 0 && arr_degree_n[2]>=0 && arr_degree_n[3]>=0 && vtdvu4[2] >= 0 && vtdvu4[3] >= 0){
-            //cout << arr_degree_n[0]*vtdvu4[0] << "*X2 + " << arr_degree_n[0]*vtdvu4[1]+arr_degree_n[1]*vtdvu4[0] << "*X1*X0 + " << arr_degree_n[1]*vtdvu4[1] << "*X0\n";
-            cout<< arr_degree_n[0]*vtdvu4[1] << "*X5 + " << arr_degree_n[0]*vtdvu4[2] << "*X4 + " << \
-            arr_degree_n[0]*vtdvu4[3] << "*X3 + " << arr_degree_n[1]*vtdvu4[1] << "*X4 + " << \
-            arr_degree_n[1]*vtdvu4[2] << "*X3 + " << arr_degree_n[1]*vtdvu4[3] <<"*X2 + " << \
-            arr_degree_n[2]*vtdvu4[1] << "*X3 + " << arr_degree_n[2]*vtdvu4[2] <<"*X2 + " << \
-            arr_degree_n[2]*vtdvu4[3] << "*X + " << arr_degree_n[3]*vtdvu4[1] << "*X2 + " << \
-            arr_degree_n[3]*vtdvu4[2] << "*X + " << arr_degree_n[3]*vtdvu4[3] << " + (" << \
-            arr_degree_n[0] << "*X6 + " << arr_degree_n[1] << "*X5 + " << arr_degree_n[2] << "*X4 + " << arr_degree_n[3] << "*X3) * " << vtdvu4[0] << endl;
-        }
-        
-        else{
-            cout <<"какой-то коэффициент меньше 0 ERROR \n";
-        }
-        
-        delete [] vtdvu4;
+        Foo_im_ILA(arr_degree_n[0]*vtdvu4[1],"X5"); 
+        Foo_im_ILA(arr_degree_n[0]*vtdvu4[2],"X4");
+        Foo_im_ILA(arr_degree_n[0]*vtdvu4[3],"X3");
+        Foo_im_ILA(arr_degree_n[1]*vtdvu4[1],"X4");
+        Foo_im_ILA(arr_degree_n[1]*vtdvu4[2],"X3");
+        Foo_im_ILA(arr_degree_n[1]*vtdvu4[3],"X2");
+        Foo_im_ILA(arr_degree_n[2]*vtdvu4[1],"X3");
+        Foo_im_ILA(arr_degree_n[2]*vtdvu4[2],"X2");
+        Foo_im_ILA(arr_degree_n[2]*vtdvu4[3],"X1");
+        Foo_im_ILA(arr_degree_n[3]*vtdvu4[1],"X2");
+        Foo_im_ILA(arr_degree_n[3]*vtdvu4[2],"X1");
+        Foo_im_ILA(arr_degree_n[3]*vtdvu4[3],"X0");
+        Foo_im_ILA(arr_degree_n[0],"X6");
+        Foo_im_ILA(arr_degree_n[1],"X5");
+        Foo_im_ILA(arr_degree_n[2],"X4");
+        Foo_im_ILA(arr_degree_n[3],"X3");
+        Foo_im_ILA(vtdvu4[0],"X0");
+        cout << "\n";
+
     };
     
     
     // Выводит сумму четырехчленов
     
     void summa(){                      
-        T *vtdvu4 = new T[4];
+        T vtdvu4[4];
         cout << "Введите коэффициенты второго четырехчлена:\n";
         for (int i=0; i<4;i++){
             cin >> vtdvu4[i];
         }
         cout << "Сумма четырехчленов: ";
         
+
+            
+            
+        Foo_im_ILA(arr_degree_n[0],"X3"); 
+        Foo_im_ILA(arr_degree_n[1],"X2");
+        Foo_im_ILA(arr_degree_n[2],"X1");
+        Foo_im_ILA(arr_degree_n[3],"X0");
+        Foo_im_ILA(vtdvu4[0],"X3");
+        Foo_im_ILA(vtdvu4[1],"X2");
+        Foo_im_ILA(vtdvu4[2],"X1");
+        Foo_im_ILA(vtdvu4[3],"X0");
+        cout << "\n";
         
-        if (arr_degree_n[0]>=0 && arr_degree_n[1]>=0 && vtdvu4[0] >= 0 && vtdvu4[1] >= 0 && arr_degree_n[2]>=0 && arr_degree_n[3]>=0 && vtdvu4[2] >= 0 && vtdvu4[3] >= 0){
-            cout << arr_degree_n[0] << "*X3 + " << arr_degree_n[1] << "*X2 + " << arr_degree_n[2] << "X + " << arr_degree_n[3] << " + " << vtdvu4[0] << "*X3 + " << \
-            vtdvu4[1] << "*X2 + " << vtdvu4[2] << "*X + " << vtdvu4[3] << endl;
-        }
-        
-        else{
-            cout <<"какой-то коэффициент меньше 0 ERROR \n";
-        }
-        
-        delete [] vtdvu4;
+
     };
     
     
     // Выводит разность четырехчленов
     void raznost(){
-        T *vtdvu4 = new T[4];
+        T vtdvu4[4];
         cout << "Введите коэффициенты второго четырехчлена:\n";
         for (int i=0; i<4;i++){
             cin >> vtdvu4[i];
         }
         cout << "Разность четырехчленов: ";
-        if (arr_degree_n[0]>=0 && arr_degree_n[1]>=0 && vtdvu4[0] >= 0 && vtdvu4[1] >= 0 && arr_degree_n[2]>=0 && arr_degree_n[3]>=0 && vtdvu4[2] >= 0 && vtdvu4[3] >= 0){
-            cout << arr_degree_n[0] << "*X3 + " << arr_degree_n[1] << "*X2 + " << arr_degree_n[2] << "X + " << arr_degree_n[3] << " - " << vtdvu4[0] << "*X3 - " << \
-            vtdvu4[1] << "*X2 - " << vtdvu4[2] << "*X - " << vtdvu4[3] << endl;
-        }
-        
-        else{
-            cout <<"какой-то коэффициент меньше 0 ERROR \n";
-        }
-        
-        delete [] vtdvu4;
+
+        Foo_im_ILA(arr_degree_n[0],"X3"); 
+        Foo_im_ILA(arr_degree_n[1],"X2");
+        Foo_im_ILA(arr_degree_n[2],"X1");
+        Foo_im_ILA(arr_degree_n[3],"X0");
+        Foo_im_ILA(vtdvu4[0],"X3");
+        Foo_im_ILA(vtdvu4[1],"X2");
+        Foo_im_ILA(vtdvu4[2],"X1");
+        Foo_im_ILA(vtdvu4[3],"X0");
+        cout << "\n";
+   
     };
     
     

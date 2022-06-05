@@ -53,54 +53,10 @@ class Second: public Main<double> {
         
         cout << "Произведение двух двучленов: ";
         
-        if (arr_degree_n[0]>=0 && arr_degree_n[1]>=0 && vtdvu[0] >= 0 && vtdvu[1] >= 0){
-            cout << arr_degree_n[0]*vtdvu[0] << "*X2 + " << arr_degree_n[0]*vtdvu[1]+arr_degree_n[1]*vtdvu[0] << "*X1*X0 + " << arr_degree_n[1]*vtdvu[1] << "*X0\n";
-        }
-        if (arr_degree_n[0]>=0 && arr_degree_n[1] < 0 && vtdvu[0] >= 0 && vtdvu[1] >= 0){
-            cout << arr_degree_n[0]*vtdvu[0] << "*X2 + " << arr_degree_n[0]*vtdvu[1]+arr_degree_n[1]*vtdvu[0] << "*X1*X0 - " << abs(arr_degree_n[1]*vtdvu[1]) << "*X0\n";
-        }
-        if (arr_degree_n[0]>=0 && arr_degree_n[1] < 0 && vtdvu[0] >= 0 && vtdvu[1] < 0){
-            cout << arr_degree_n[0]*vtdvu[0] << "*X2 - " << abs(arr_degree_n[0]*vtdvu[1]+arr_degree_n[1]*vtdvu[0]) << "*X1*X0 + " << abs(arr_degree_n[1]*vtdvu[1]) << "*X0\n";
-        }
-        if (arr_degree_n[0]>=0 && arr_degree_n[1] >= 0 && vtdvu[0] >= 0 && vtdvu[1] < 0){
-            cout << arr_degree_n[0]*vtdvu[0] << "*X2 + " << arr_degree_n[0]*vtdvu[1]+arr_degree_n[1]*vtdvu[0] << "*X1*X0 - " << abs(arr_degree_n[1]*vtdvu[1]) << "*X0\n";
-        }
-        if (arr_degree_n[0]<0 && arr_degree_n[1] >= 0 && vtdvu[0] < 0 && vtdvu[1] >= 0){
-            cout << arr_degree_n[0]*vtdvu[0] << "*X2 - " << abs(arr_degree_n[0]*vtdvu[1]+arr_degree_n[1]*vtdvu[0]) << "*X1*X0 + " << abs(arr_degree_n[1]*vtdvu[1]) << "*X0\n";
-        }
-        if (arr_degree_n[0]<0 && arr_degree_n[1] >= 0 && vtdvu[0] >= 0 && vtdvu[1] >= 0){
-            cout << "-" << abs(arr_degree_n[0]*vtdvu[0]) << "*X2 + " << abs(arr_degree_n[0]*vtdvu[1]+arr_degree_n[1]*vtdvu[0]) << "*X1*X0 + " << abs(arr_degree_n[1]*vtdvu[1]) << "*X0\n";
-        }
-        if (arr_degree_n[0]>=0 && arr_degree_n[1] >= 0 && vtdvu[0] < 0 && vtdvu[1] >= 0){
-            cout << "-" << abs(arr_degree_n[0]*vtdvu[0]) << "*X2 + " << abs(arr_degree_n[0]*vtdvu[1]+arr_degree_n[1]*vtdvu[0]) << "*X1*X0 + " << abs(arr_degree_n[1]*vtdvu[1]) << "*X0\n";
-        }
-        if (arr_degree_n[0] < 0 && arr_degree_n[1] < 0 && vtdvu[0] < 0 && vtdvu[1] < 0){
-            cout << abs(arr_degree_n[0]*vtdvu[0]) << "*X2 + " << abs(arr_degree_n[0]*vtdvu[1]+arr_degree_n[1]*vtdvu[0]) << "*X1*X0 + " << abs(arr_degree_n[1]*vtdvu[1]) << "*X0\n";
-        }
-        if (arr_degree_n[0] >= 0 && arr_degree_n[1] >= 0 && vtdvu[0] < 0 && vtdvu[1] < 0){
-            cout << "-" << abs(arr_degree_n[0]*vtdvu[0]) << "*X2 - " << abs(arr_degree_n[0]*vtdvu[1]+arr_degree_n[1]*vtdvu[0]) << "*X1*X0 - " << abs(arr_degree_n[1]*vtdvu[1]) << "*X0\n";
-        }
-        if (arr_degree_n[0] < 0 && arr_degree_n[1] < 0 && vtdvu[0] >= 0 && vtdvu[1] < 0){
-            cout << "-" << abs(arr_degree_n[0]*vtdvu[0]) << "*X2 - " << abs(arr_degree_n[0]*vtdvu[1]+arr_degree_n[1]*vtdvu[0]) << "*X1*X0 + " << abs(arr_degree_n[1]*vtdvu[1]) << "*X0\n";
-        }
-        if (arr_degree_n[0] < 0 && arr_degree_n[1] < 0 && vtdvu[0] < 0 && vtdvu[1] >= 0){
-            cout << abs(arr_degree_n[0]*vtdvu[0]) << "*X2 + " << abs(arr_degree_n[0]*vtdvu[1]+arr_degree_n[1]*vtdvu[0]) << "*X1*X0 - " << abs(arr_degree_n[1]*vtdvu[1]) << "*X0\n";
-        }
-        if (arr_degree_n[0] < 0 && arr_degree_n[1] < 0 && vtdvu[0] >= 0 && vtdvu[1] >= 0){
-            cout << "-"<< abs(arr_degree_n[0]*vtdvu[0]) << "*X2 - " << abs(arr_degree_n[0]*vtdvu[1]+arr_degree_n[1]*vtdvu[0]) << "*X1*X0 - " << abs(arr_degree_n[1]*vtdvu[1]) << "*X0\n";
-        }
-        if (arr_degree_n[0] >= 0 && arr_degree_n[1] < 0 && vtdvu[0] < 0 && vtdvu[1] < 0){
-            cout << "-"<< abs(arr_degree_n[0]*vtdvu[0]) << "*X2 + " << abs(arr_degree_n[0]*vtdvu[1]+arr_degree_n[1]*vtdvu[0]) << "*X1*X0 + " << abs(arr_degree_n[1]*vtdvu[1]) << "*X0\n";
-        }
-        if (arr_degree_n[0] >= 0 && arr_degree_n[1] < 0 && vtdvu[0] < 0 && vtdvu[1] >= 0){
-            cout << "-"<< abs(arr_degree_n[0]*vtdvu[0]) << "*X2 + " << abs(arr_degree_n[0]*vtdvu[1]+arr_degree_n[1]*vtdvu[0]) << "*X1*X0 - " << abs(arr_degree_n[1]*vtdvu[1]) << "*X0\n";
-        }
-        if (arr_degree_n[0] < 0 && arr_degree_n[1] >= 0 && vtdvu[0] < 0 && vtdvu[1] < 0){
-            cout << abs(arr_degree_n[0]*vtdvu[0]) << "*X2 - " << abs(arr_degree_n[0]*vtdvu[1]+arr_degree_n[1]*vtdvu[0]) << "*X1*X0 - " << abs(arr_degree_n[1]*vtdvu[1]) << "*X0\n";
-        }
-        if (arr_degree_n[0] < 0 && arr_degree_n[1] >= 0 && vtdvu[0] >= 0 && vtdvu[1] < 0){
-            cout << "-"<< abs(arr_degree_n[0]*vtdvu[0]) << "*X2 + " << abs(arr_degree_n[0]*vtdvu[1]+arr_degree_n[1]*vtdvu[0]) << "*X1*X0 - " << abs(arr_degree_n[1]*vtdvu[1]) << "*X0\n";
-        }
+        Foo_im_ILA(arr_degree_n[0]*vtdvu[0], "X2");
+        Foo_im_ILA(arr_degree_n[0]*vtdvu[1]+arr_degree_n[1]*vtdvu[0], "X1*X0");
+        Foo_im_ILA(arr_degree_n[1]*vtdvu[1],"X0");
+        cout << "\n";
         
         delete [] vtdvu;
     };
@@ -114,18 +70,11 @@ class Second: public Main<double> {
             cin >> vtdvu[i];
         }
         cout << "Сумма двучленов: ";
-        if ((arr_degree_n[0] + vtdvu[0])>=0 && (arr_degree_n[1] + vtdvu[1])>=0){
-            cout << abs(arr_degree_n[0]+vtdvu[0]) << "*X1 + " << abs(arr_degree_n[1]+vtdvu[1]) << "*X0\n";
-        }
-        if ((arr_degree_n[0] + vtdvu[0])<0 && (arr_degree_n[1] + vtdvu[1])>=0){
-            cout << "-" << abs(arr_degree_n[0]+vtdvu[0]) << "*X1 + " << abs(arr_degree_n[1]+vtdvu[1]) << "*X0\n";
-        }
-        if ((arr_degree_n[0] + vtdvu[0])<0 && (arr_degree_n[1] + vtdvu[1])<0){
-            cout << "-" << abs(arr_degree_n[0]+vtdvu[0]) << "*X1 - " << abs(arr_degree_n[1]+vtdvu[1]) << "*X0\n";
-        }
-        if ((arr_degree_n[0] + vtdvu[0])>=0 && (arr_degree_n[1] + vtdvu[1])<0){
-            cout << abs(arr_degree_n[0]+vtdvu[0]) << "*X1 - " << abs(arr_degree_n[1]+vtdvu[1]) << "*X0\n";
-        }
+        
+        Foo_im_ILA(arr_degree_n[0]+vtdvu[0],"X1");
+        Foo_im_ILA(arr_degree_n[1]+vtdvu[1],"X0");
+        cout << "\n";
+        
         delete [] vtdvu;
     };
     
@@ -138,18 +87,11 @@ class Second: public Main<double> {
             cin >> vtdvu[i];
         }
         cout << "Разность двучленов: ";
-        if ((arr_degree_n[0] - vtdvu[0])>=0 && (arr_degree_n[1] - vtdvu[1])>=0){
-            cout << abs(arr_degree_n[0]-vtdvu[0]) << "*X1 + " << abs(arr_degree_n[1]-vtdvu[1]) << "*X0\n";
-        }
-        if ((arr_degree_n[0] - vtdvu[0])<0 && (arr_degree_n[1] - vtdvu[1])>=0){
-            cout << "-" << abs(arr_degree_n[0]-vtdvu[0]) << "*X1 + " << abs(arr_degree_n[1]-vtdvu[1]) << "*X0\n";
-        }
-        if ((arr_degree_n[0] - vtdvu[0])<0 && (arr_degree_n[1] - vtdvu[1])<0){
-            cout << "-" << abs(arr_degree_n[0]-vtdvu[0]) << "*X1 - " << abs(arr_degree_n[1]-vtdvu[1]) << "*X0\n";
-        }
-        if ((arr_degree_n[0] - vtdvu[0])>=0 && (arr_degree_n[1] - vtdvu[1])<0){
-            cout << abs(arr_degree_n[0]-vtdvu[0]) << "*X1 - " << abs(arr_degree_n[1]-vtdvu[1]) << "*X0\n";
-        }
+        
+        Foo_im_ILA(arr_degree_n[0]-vtdvu[0], "X1");
+        Foo_im_ILA(arr_degree_n[1]-vtdvu[1], "X0");
+        cout << "\n";
+    
         delete [] vtdvu;
     };
     
