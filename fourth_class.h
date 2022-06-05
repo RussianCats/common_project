@@ -86,14 +86,20 @@ class Fourth: public Main<double> {
 
             
             
-        Foo_im_ILA(arr_degree_n[0],"X3"); 
+        /*Foo_im_ILA(arr_degree_n[0],"X3"); 
         Foo_im_ILA(arr_degree_n[1],"X2");
         Foo_im_ILA(arr_degree_n[2],"X1");
         Foo_im_ILA(arr_degree_n[3],"X0");
         Foo_im_ILA(vtdvu4[0],"X3");
         Foo_im_ILA(vtdvu4[1],"X2");
         Foo_im_ILA(vtdvu4[2],"X1");
-        Foo_im_ILA(vtdvu4[3],"X0");
+        Foo_im_ILA(vtdvu4[3],"X0");*/
+        
+        
+        Foo_im_ILA(arr_degree_n[0]+vtdvu4[0], "X3");
+        Foo_im_ILA(arr_degree_n[1]+vtdvu4[1], "X2");
+        Foo_im_ILA(arr_degree_n[2]+vtdvu4[2], "X1");
+        Foo_im_ILA(arr_degree_n[3]+vtdvu4[3], "X0");
         cout << "\n";
         
 
@@ -109,16 +115,22 @@ class Fourth: public Main<double> {
         }
         cout << "Разность четырехчленов: ";
 
-        Foo_im_ILA(arr_degree_n[0],"X3"); 
+        /*Foo_im_ILA(arr_degree_n[0],"X3"); 
         Foo_im_ILA(arr_degree_n[1],"X2");
         Foo_im_ILA(arr_degree_n[2],"X1");
         Foo_im_ILA(arr_degree_n[3],"X0");
         Foo_im_ILA(vtdvu4[0],"X3");
         Foo_im_ILA(vtdvu4[1],"X2");
         Foo_im_ILA(vtdvu4[2],"X1");
-        Foo_im_ILA(vtdvu4[3],"X0");
+        Foo_im_ILA(vtdvu4[3],"X0");*/
+        
+        
+        
+        Foo_im_ILA(arr_degree_n[0]-vtdvu4[0], "X3");
+        Foo_im_ILA(arr_degree_n[1]-vtdvu4[1], "X2");
+        Foo_im_ILA(arr_degree_n[2]-vtdvu4[2], "X1");
+        Foo_im_ILA(arr_degree_n[3]-vtdvu4[3], "X0");
         cout << "\n";
-   
     };
     
     
@@ -129,4 +141,3 @@ class Fourth: public Main<double> {
         for (int i = 0; i <= degree_n; i++) arr_degree_n[i] = open_arr_degree_n[i];
     };
 };
-
