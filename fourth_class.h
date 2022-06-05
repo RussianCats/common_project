@@ -15,6 +15,8 @@ template<class T>
 class Fourth: public Main<double> {
     
     public:
+    
+    
     // конструктор с параметрами
         Fourth(int open_degree_n, T open_arr_degree_n[])
         {
@@ -119,3 +121,4 @@ class Fourth: public Main<double> {
         for (int i = 0; i <= degree_n; i++) arr_degree_n[i] = open_arr_degree_n[i];
     };
 };
+

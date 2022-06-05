@@ -14,6 +14,8 @@ using namespace std;
 // функцию для изменения коэффициентов,
 // функцию вычисления значения многочлена для заданного числа
 
+
+
 template<class T>
 class Main
 {
@@ -90,6 +92,22 @@ public:
         cout << "многочлен равен = " << end_x << "\n";
         
     }
+
+    virtual void Foo_im_ILA(T value, string str) 
+    {
+        if (value > 0)
+        {
+            cout << " +" << value << "*" << str; 
+        }else if (value < 0) 
+        {
+            cout << " -" << abs(value) << "*" << str;
+        } else
+        {
+            cout << "";
+        }
+        
+    }
+
     //Функции класса Данилки
     virtual void kub(){};
     virtual void proizv(){};

@@ -22,13 +22,13 @@ class Third: public Main<double> {
         };
           void kva(){                           
         
-        if (arr_degree_n[2] >= 0 && arr_degree_n[1] >= 0 && arr_degree_n[0])
+    
         cout<<pow(arr_degree_n[0],2)<<"*X4+ "<<pow(arr_degree_n[1],2)<<"*X2+ "<<pow(arr_degree_n[2],2)<<"*X0+ "<<2*(arr_degree_n[0]*arr_degree_n[1])<<\
-        "*X3+ "<<2*(arr_degree_n[0]*arr_degree_n[2])<<"X2+ "<<2*(arr_degree_n[1]*arr_degree_n[2])<<"*X0\n";
-        else
-        {
-            cout<<"Ошибка ввода";
-        }
+        "*X3+ "<<2*(arr_degree_n[0]*arr_degree_n[2])<<"X2+ "<<2*(arr_degree_n[1]*arr_degree_n[2])<<"*X1\n";
+        
+        
+    
+    
         
     };
 
@@ -40,10 +40,17 @@ class Third: public Main<double> {
         }
         
         cout << "Произведение двух трехчленов: ";
-        if (arr_degree_n[0]>=0 && arr_degree_n[1]>=0&&arr_degree_n[2]>=0 && vtdvu[0] >= 0 && vtdvu[1] >= 0&&vtdvu[2]>=0)
-        cout<<arr_degree_n[0]*vtdvu[0]<<"*X4+ "<<arr_degree_n[0]*vtdvu[1]<<"*X3+ "<<arr_degree_n[0]*vtdvu[2]<<"*X2+ "<<arr_degree_n[1]*vtdvu[0]<<"*X3+ "<<arr_degree_n[1]*vtdvu[1]<<\
-        "X2+ "<<arr_degree_n[1]*vtdvu[2]<<"*X1+ "<<arr_degree_n[2]*vtdvu[0]<<"*X2+ "<<arr_degree_n[2]*vtdvu[1]<<"*X1+ "<<arr_degree_n[2]*vtdvu[2]<<"*X0+\n  ";
-        else cout<<"Ошибка ввода\n";
+        Foo_im_ILA(arr_degree_n[0]*vtdvu[0], "X4"); 
+        Foo_im_ILA(arr_degree_n[0]*vtdvu[1], "X3");
+        Foo_im_ILA(arr_degree_n[0]*vtdvu[2], "X2");
+        Foo_im_ILA(arr_degree_n[1]*vtdvu[0],"X3");
+        Foo_im_ILA(arr_degree_n[1]*vtdvu[1],"X2");
+        Foo_im_ILA(arr_degree_n[1]*vtdvu[2],"X1");
+        Foo_im_ILA(arr_degree_n[2]*vtdvu[0],"X2");
+        Foo_im_ILA(arr_degree_n[2]*vtdvu[1],"X1");
+        cout << "\n";
+ 
+
         delete [] vtdvu;
     };
     
